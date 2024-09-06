@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+
+// export interface Props {
+//   title: string;
+// }
+
+const { title = "" } = Astro.props;
+
+import Header from "../components/Header.astro"
+
+import Footer from "../components/Footer.astro"
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - AskExperts</title>
+  </head>
+  <body>
+    <Header/>
+    <main>
+      <slot />
+    </main>
+    <Footer/>
+  </body>
+</html>
+
+<style>
+
+  main { 
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --content: min(75rem, 100% - var(--gap) * 2);
+    
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns:
+    [full-start] var(--full)
+    [content-start] var(--content) [content-end]
+    var(--full) [full-end];
+
+    > * {
+      grid-column: content;
+    }
+    .full {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: full;
+      > * {
+        grid-column: content;
+      }
+    }
+  }
+
+</style>

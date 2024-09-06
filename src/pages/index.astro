@@ -1,16 +1,28 @@
 ---
+// import { Icon } from 'astro-icon/components';
+
+import faqData from "../data/faq.json";
+
+import AccordionContainer from "../components/AccordionContainer.astro"
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import EmployeeSection from "../components/EmployeeSection.astro";
+
+const employeeData = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/frontend-design/main/resources/json/employees.json").then((res) => res.json());
+
+const FirstThreeEmployess = employeeData.slice(0,3);
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<BaseLayout title="Home">
+  <!-- <EmployeeSection data={employeeData}/> -->
+  <!-- <EmployeeSection data={FirstThreeEmployess}/> -->
+  <!-- <Icon name="first"/> -->
+  <!-- <AccordionContainer data={faqData} exclusive="true" /> -->
+</BaseLayout>
+
+<style>
+
+</style>
