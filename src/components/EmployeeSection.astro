@@ -6,12 +6,44 @@ const { data } = Astro.props
 
 ---
 
-<section>
-    {
-        data.map(employee => <EmployeeCard employee={employee}/>)
-    }
+
+<section class="employees-wrapper">
+    <div class="top">
+        <div class="text">
+            <h1>Meet Our Great Team</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
+        </div>
+        <a class="btn-primary" href="#">Join our team</a>
+    </div>
+    <section class="employees">
+        {
+            data.map(employee => <EmployeeCard employee={employee}/>)
+        }
+    </section>
 </section>
 
 <style>
+    @layer components {
+        .employees-wrapper {
+            display: grid;
+            gap: 40px;
+            .top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .text {
+                    max-width: 50%;
+                    display: grid;
+                    gap: 16px;
+                }
+            }
+        .employees {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 80px;
+            column-gap: 50px;
+        }
+    }
+    }
     
 </style>
