@@ -1,8 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroBackground from "../components/HeroBackground.astro";
+
+import faqData from "../data/faq.json";
+import AccordionContainer from "../components/AccordionContainer.astro";
 ---
 
 <BaseLayout title="About">
     <HeroBackground surface="about" tag="SERVICE" headline="Creative Services For Boost Your Business Growth"/>
+    <AccordionContainer data={faqData} exclusive="true" />
 </BaseLayout>

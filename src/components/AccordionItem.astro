@@ -7,7 +7,7 @@ const { id, question, answer, linkBlock } = props;
   <article>
     <p>
       <button aria-expanded="false" aria-controls={id}>
-        <span>{question}</span>
+        <h5>{question}</h5>
         <svg
           viewBox="0 0 10 10"
           aria-hidden="true"
@@ -24,7 +24,7 @@ const { id, question, answer, linkBlock } = props;
       {answer.map((a) => <p set:html={a} />)}
       {
         linkBlock && (
-          <a class="link-block" href={linkBlock.url} target="_blank">
+          <a class="btn-primary" href={linkBlock.url} target="_blank">
             {linkBlock.label}
           </a>
         )
@@ -102,7 +102,7 @@ button[aria-expanded="true"] svg {
 }
 
     .answer {
-      color: #595566;
+      /* color: #595566; */
 
       display: grid; 
       grid-template-rows: 0fr;
@@ -110,7 +110,13 @@ button[aria-expanded="true"] svg {
       
       .answer-content {
         overflow: hidden; 
-       
+       p {
+        color: var(--body-text);
+        font-weight: normal;
+       }
+       .btn-primary {
+        margin-top: 1rem;
+       }
       }
       
       > * + * {

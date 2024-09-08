@@ -1,30 +1,38 @@
 [
   {
     "id": "faq-1",
-    "question": "Hvornår kan jeg forvente at modtage mit årsbrev?",
-    "answer": ["Du vil modtage brevet i Digital Post senest 10. december 2022. Er du ikke tilmeldt Digital Post, vil du modtage brevet per post senest 16. december 2022.", "Hvis du ikke har modtaget dit <a href='#0'>årsbrev</a> inden for de nævnte datoer, kan du kontakte Skattestyrelsen på telefon 72 22 18 18."]
+    "question": "The Balance Sheet",
+    "answer": ["The Balance Sheet is a summary of the assets and liabilities and equity of a business at a specific point of time."],
+    "linkBlock": {
+      "label": "Read More",
+      "url": "#"
+    }
   },
   {
     "id": "faq-2",
-    "question": "Hvordan læser jeg mit årsbrev?",
-    "answer": ["Du kan åbne denne læsevejledning, hvis du vil se, hvad beløbene i dit årsbrev betyder."],
+    "question": "Income Statement",
+    "answer": ["The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)."],
     "linkBlock": {
-      "label": "Læsevejledning - årsbrevet 2022",
-      "url": "https://www.skat.dk/SKAT.aspx?oId=2236077&vId=0"
+      "label": "Read More",
+      "url": "#"
     }
   },
   {
     "id": "faq-3",
-    "question": "Hvornår kan jeg forvente at modtage mit årsbrev?",
-    "answer": ["Du vil modtage brevet i Digital Post senest 10. december 2022. Er du ikke tilmeldt Digital Post, vil du modtage brevet per post senest 16. december 2022.", "Hvis du ikke har modtaget dit <a href='#0'>årsbrev</a> inden for de nævnte datoer, kan du kontakte Skattestyrelsen på telefon 72 22 18 18."]
+    "question": "Financial Plan",
+    "answer": ["Keep your information current and review the documents on a regular basis (monthly or more often if needed). Review them with key individuals within your company."],
+    "linkBlock": {
+      "label": "Read More",
+      "url": "#"
+    }
   },
   {
     "id": "faq-4",
-    "question": "Hvordan læser jeg mit årsbrev?",
-    "answer": ["Du kan åbne denne læsevejledning, hvis du vil se, hvad beløbene i dit årsbrev betyder."],
+    "question": "Financial Ratios",
+    "answer": ["Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company."],
     "linkBlock": {
-      "label": "Læsevejledning - årsbrevet 2022",
-      "url": "https://www.skat.dk/SKAT.aspx?oId=2236077&vId=0"
+      "label": "Read More",
+      "url": "#"
     }
   }
 ]
