@@ -13,16 +13,25 @@ const employeeData = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen
 
 const FirstThreeEmployess = employeeData.slice(0,3);
 
+import ScrollingContainer from "../components/ScrollingContainer.astro";
+import { cardContent } from "../data/card-content.js";
+
 ---
 
 
 <BaseLayout title="Home">
   <!-- <EmployeeSection data={employeeData}/> -->
   <!-- <EmployeeSection data={FirstThreeEmployess}/> -->
-  <!-- <Icon name="first"/> -->
+  
   <!-- <AccordionContainer data={faqData} exclusive="true" /> -->
+
+  <ScrollingContainer cardContent={cardContent} />
+
 </BaseLayout>
+
+
 
 <style>
 
-</style>
+</style> 
+
