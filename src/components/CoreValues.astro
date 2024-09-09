@@ -1,3 +1,131 @@
 ---
+const coreValues = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/frontend-design/main/resources/json/corevalues.json").then((res) => res.json());
+import { Icon } from 'astro-icon/components';
+const {values } = coreValues;
+
+const { surface = 'primary', tag, heading, button, description } = Astro.props
+
 
 ---
+
+
+<div data-surface={surface} class="core-values full">
+    <div class="core-values-top">
+        <div class="text"> 
+            {tag && (
+                <p class="tag">{tag}</p>
+            )}
+              {heading && (
+                <h1>{heading}</h1>
+            )}
+                  {description && (
+                    <p>{description}</p>
+                )}
+        </div>
+        {button && (
+            <a class="btn-secondary" href="#">{button}</a>
+        )}
+        
+    </div>
+   
+  <ul class="full-width">
+    {values.map((value) => (
+      <li>
+        <div class="icon-card">
+          <Icon name={value.icon} />
+        </div>
+        <div class="text-card">
+            <h6>{value.title}</h6>
+            <p>{value.description}</p>
+        </div>
+        <div class="read-more">
+            <a href={value.link.url}>{value.link.text} &rarr;</a>
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+    @layer components {
+
+    [data-surface="primary"] {
+      --background-color: var(--heading-color);
+      --text-color: var(--white-color);
+      --values-heading-color: var(--white-color);
+      --tag-color: var(--heading-color);
+      li {
+        --card-color: #F5F5F5;
+        h6 {
+            --heading-color-card: var(--white-color)
+        }
+   
+      }
+    }
+    
+    [data-surface="secondary"] {
+        --background-color: #F5F5F5;
+        --values-heading-color: var(--heading-color);
+        --tag-color: var(--heading-color);
+        li {
+            --card-color: var(--white-color);
+        }
+    }
+
+    .core-values {
+        gap: 34px;
+        display: grid;
+        background: var(--background-color);
+        color: var(--text-color);
+        padding: 100px 0;
+        .core-values-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+      
+                .text {
+                    max-width: 60%;
+                    h1 {
+                        margin-bottom: 16px;
+                        color: var(--values-heading-color)!important;
+                    }
+                    .tag {
+                        padding: 0px 15px;
+                        background: var(--primary-color);
+                        display: inline-block;
+                        border-radius: 20px;
+                        margin-bottom: 16px;
+                        color: var(--tag-color)
+                    }
+                }
+            }
+            .full-width {
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 30px;
+                list-style: none;
+                padding: 0;
+                li {
+                    background: var(--card-color);
+                    padding: 36px 23px;
+                    border-radius: 20px;
+                    display: grid;
+                    gap: 22px;
+                    p {
+                        color: var(--body-text);
+                    }
+                    .icon-card {
+                        width: 50px;
+                    }
+                    .read-more {
+                        a {
+                            color: var(--heading-color);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>

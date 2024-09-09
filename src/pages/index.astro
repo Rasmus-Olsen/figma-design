@@ -1,22 +1,14 @@
 ---
-// import { Icon } from 'astro-icon/components';
-
-import faqData from "../data/faq.json";
-
-import AccordionContainer from "../components/AccordionContainer.astro"
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import EmployeeSection from "../components/EmployeeSection.astro";
-
-const employeeData = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/frontend-design/main/resources/json/employees.json").then((res) => res.json());
-
-const FirstThreeEmployess = employeeData.slice(0,3);
+import HeroPrimary from "../components/HeroPrimary.astro";
 
 import ScrollingContainer from "../components/ScrollingContainer.astro";
-
-
 const projections = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/frontend-design/main/resources/json/projections.json").then((res) => res.json());
+
+import CoreValues from "../components/CoreValues.astro";
+const coreValues = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/frontend-design/main/resources/json/corevalues.json").then((res) => res.json());
 
 
 ---
@@ -28,9 +20,9 @@ const projections = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/
   
   <!-- <AccordionContainer data={faqData} exclusive="true" /> -->
 
-  
+  <HeroPrimary/>
   <ScrollingContainer projections={projections} />
-
+  <CoreValues coreValues={coreValues} surface="primary" tag="Growing with our Client" heading="Our core values & principles" button="Get in touch" description="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps."/>
 
 </BaseLayout>
 

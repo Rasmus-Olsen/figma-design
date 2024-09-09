@@ -1,0 +1,129 @@
+---
+---
+
+<section class="full">
+    <div class="hero-primary ">
+        <div class="left">
+            <h1>Adam Buschemia Business Consultant</h1>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <div class="btn-secondary">Book a Meeting</div>
+        </div>
+        <div class="right">
+            <img src="../src/assets/images/sarah.jpg" alt="">
+        </div>
+    </div>
+    <div class="boxes">
+        <div class="box box-1">
+            <h6>Finance & Restructuring</h6>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <a class="btn-primary">Our Services</a>
+        </div>
+        <div class="box box-2">
+            <h6>Our Approach</h6>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <a class="btn-primary">More About </a>
+        </div>
+        <div class="box box-3">
+            <h6>Consultalk Result</h6>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <a class="btn-primary">Explore Our Solution</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background: var(--tertiary-color);
+        position: relative;
+        max-height: 600px;
+        margin-bottom: 200px;
+        .hero-primary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column: 2 / -1;
+            gap: 70px;
+            .left {
+                align-content: center;
+                z-index: 2;
+                p {
+                    margin: 20px 0;
+                }
+            }
+            .right {
+                img {
+                    max-height: 600px;
+                    object-fit: cover;
+
+                    z-index: 5;
+                    position: relative;
+                }
+            }
+            h1 {
+                color: var(--white-color);
+            }
+            p {
+                color: var(--white-color);
+            }
+        }
+        .boxes {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            z-index: 100;
+            bottom: 120px;
+            .box {
+                padding: 3rem;
+                background: rgba(38, 38, 38, 0.90);
+                backdrop-filter: blur(16px);
+                border-radius: 20px;
+                h6 {
+                    color: var(--white-color);
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: var(--white-color);
+                }
+                .btn-primary {
+                    margin-top: 36px;
+                    cursor: pointer;
+                }
+            }
+        }
+        &::before {
+            opacity: 0.6;
+            --square-count: 14;
+            --square-size: 1.34rem;
+            --_square-size: var(--square-size, 1rem);
+            --_square-half: calc(var(--square-size) / 2);
+            --_square-sum: calc(var(--square-count)* var(--square-size));
+            content: "";
+            position: absolute;
+            inline-size: calc(round(var(--_square-sum), var(--_square-size)) - var(--_square-half));
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B, #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+            mask: var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size), var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+            z-index: 1;
+            top: 8rem;
+            left: -200px;
+
+     
+        }
+        &::after {
+            opacity: 0.6;
+            --square-count: 14;
+            --square-size: 1.34rem;
+            --_square-size: var(--square-size, 1rem);
+            --_square-half: calc(var(--square-size) / 2);
+            --_square-sum: calc(var(--square-count)* var(--square-size));
+            content: "";
+            position: absolute;
+            inline-size: calc(round(var(--_square-sum), var(--_square-size)) - var(--_square-half));
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B, #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+            mask: var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size), var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+            z-index: 1;
+            top: -200px;
+            left: 700px;
+        }
+    }
+</style>
