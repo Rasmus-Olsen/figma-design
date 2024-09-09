@@ -14,7 +14,8 @@ const employeeData = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen
 const FirstThreeEmployess = employeeData.slice(0,3);
 
 import ScrollingContainer from "../components/ScrollingContainer.astro";
-import { cardContent } from "../data/card-content.js";
+import projections from "../data/projections.json"; 
+
 
 ---
 
@@ -25,7 +26,9 @@ import { cardContent } from "../data/card-content.js";
   
   <!-- <AccordionContainer data={faqData} exclusive="true" /> -->
 
-  <ScrollingContainer cardContent={cardContent} />
+  
+  <ScrollingContainer projections={projections} />
+
 
 </BaseLayout>
 

@@ -1,8 +1,16 @@
 ---
-const { cardContent, icon } = Astro.props;
-import { Icon } from 'astro-icon/components'
+
+import projectionsData from '../data/projections.json'; // Adjust the path to where your projections.json is located
+import { Icon } from 'astro-icon/components';
+
+// Use projectionsData directly in your component
+const projections = projectionsData;
+
+const { title, description, icon } = Astro.props;
 
 ---
+
+
 <div class="scrolling">
   <div class="scrolling-top">
     <div class="text">
@@ -25,17 +33,15 @@ import { Icon } from 'astro-icon/components'
 
 
   <ul class="full-width">
-    {
-      cardContent.map((card) => (
-        <li>
-          <div class="icon-card">
-            <Icon name={card.icon} />
-          </div>
-          <h3>{card.title}</h3>
-          <p>{card.description}</p>
-        </li>
-      ))
-    }
+    {projections.map((props) => (
+      <li>
+        <div class="icon-card">
+          <Icon name={props.icon} />
+        </div>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
+      </li>
+    ))}
   </ul>
 
 </div>
@@ -63,6 +69,9 @@ import { Icon } from 'astro-icon/components'
           scroll-snap-align: center;
           &:first-child {
             margin-left: calc(50% - var(--content) / 2);
+          }
+          &:last-child {
+            margin-right: calc(50% - var(--content) / 2);
           }
         }
       }

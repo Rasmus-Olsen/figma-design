@@ -18,7 +18,9 @@ const { data } = Astro.props
     <section class="employees">
         {
             data.map(employee => <EmployeeCard employee={employee}/>)
+            
         }
+      
     </section>
 </section>
 
@@ -44,6 +46,6 @@ const { data } = Astro.props
             column-gap: 50px;
         }
     }
-    }
+}
     
 </style>
