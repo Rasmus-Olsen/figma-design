@@ -1,13 +1,22 @@
 ---
+
 import BaseLayout from "../layouts/BaseLayout.astro";
+
 import HeroBackground from "../components/HeroBackground.astro";
+
+import EmployeeSection from "../components/EmployeeSection.astro";
 
 import faqData from "../data/faq.json";
 import AccordionContainer from "../components/AccordionContainer.astro";
+
+
+const employeeData = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/frontend-design/main/resources/json/employees.json").then((res) => res.json());
+const FirstThreeEmployess = employeeData.slice(0,3);
 
 ---
 
 <BaseLayout title="About">
     <HeroBackground surface="about" tag="SERVICE" headline="Creative Services For Boost Your Business Growth"/>
+    <EmployeeSection data={FirstThreeEmployess} tag="Our team" heading="We champion the bold to achieve the extraordinary" description="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team"./>
     <AccordionContainer data={faqData} exclusive="true" />
 </BaseLayout>

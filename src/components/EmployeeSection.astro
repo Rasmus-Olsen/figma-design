@@ -2,23 +2,34 @@
 import EmployeeCard from "./EmployeeCard.astro"
 
 
-const { data } = Astro.props
+const { data, tag, heading, button, description } = Astro.props
 
 ---
 
 
 <section class="employees-wrapper">
+
     <div class="top">
-        <div class="text">
-            <h1>Meet Our Great Team</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
+        
+        <div class="text"> 
+            {tag && (
+                <p class="tag">{tag}</p>
+            )}
+              {heading && (
+                <h1>{heading}</h1>
+            )}
+                  {description && (
+                    <p>{description}</p>
+                )}
         </div>
-        <a class="btn-primary" href="#">Join our team</a>
+        {button && (
+            <a class="btn-primary" href="#">{button}</a>
+        )}
+        
     </div>
     <section class="employees">
         {
             data.map(employee => <EmployeeCard employee={employee}/>)
-            
         }
       
     </section>
@@ -29,15 +40,26 @@ const { data } = Astro.props
         .employees-wrapper {
             display: grid;
             gap: 40px;
+      
             .top {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
+      
                 .text {
                     max-width: 50%;
-                    display: grid;
-                    gap: 16px;
+                    h1 {
+                        margin-bottom: 16px;
+                    }
+                    .tag {
+                        padding: 0px 15px;
+                        background: var(--primary-color);
+                        display: inline-block;
+                        border-radius: 20px;
+                        margin-bottom: 16px;
+                    }
                 }
+           
             }
         .employees {
             display: grid;

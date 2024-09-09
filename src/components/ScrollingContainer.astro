@@ -1,12 +1,10 @@
 ---
 
-import projectionsData from '../data/projections.json'; // Adjust the path to where your projections.json is located
+const projectionsData = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/frontend-design/main/resources/json/projections.json").then((res) => res.json());
 import { Icon } from 'astro-icon/components';
 
-// Use projectionsData directly in your component
-const projections = projectionsData;
 
-const { title, description, icon } = Astro.props;
+const {values } = projectionsData;
 
 ---
 
@@ -33,13 +31,13 @@ const { title, description, icon } = Astro.props;
 
 
   <ul class="full-width">
-    {projections.map((props) => (
+    {values.map((value) => (
       <li>
         <div class="icon-card">
-          <Icon name={props.icon} />
+          <Icon name={value.icon} />
         </div>
-        <h3>{props.title}</h3>
-        <p>{props.description}</p>
+        <h3>{value.title}</h3>
+        <p>{value.description}</p>
       </li>
     ))}
   </ul>
@@ -125,14 +123,30 @@ const { title, description, icon } = Astro.props;
       align-self: start;
       display: grid;
       gap: 10px;
+      transition: all .4s ease-in-out;
+      cursor: pointer;
+     
+      &:hover {
+        background: var(--heading-color);
+        color: var(--white-color);
+        h3 {
+          color: var(--white-color);
+        }
+        .icon-card {
+          color: var(--primary-color);
+        }
+      }
       h3 {
         font-weight: 700;
         font-size: 1.5625rem;
+        transition: all .4s ease-in-out;
       }
     }
     .icon-card {
       width: 40px;
       margin-bottom: 14px;
+      color: var(--heading-color);
+      transition: all .4s ease-in-out;
     }
   }
   
