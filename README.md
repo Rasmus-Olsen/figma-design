@@ -26,4 +26,9 @@ Ville gerne have lavet en burgermenu (eller bare en bedre mobil navigation).
 Havde store problemer med at få HeroPrimary til at fungere som jeg gerne ville, jeg sad og lavede den på min computer
 på skolen og var rimelig tilfreds, så kom jeg hjem og satte mig ved mit arbejds setup hvor jeg har 3 skærme
 og de er en del større, der fandt jeg så ud af det ikke virkede som det skulle når man scalere tingene.
-Håber det gpr..
+Håber det gr..
+
+Havde problemer med at når jeg lagde mine ting på netlify ville billederne ikke komme frem,
+fandt så frem til at hvis jeg lagde mine mapper og billeder billederne ind i public mappen kunne jeg
+få dem frem på hjemmesiden.
+Ved ikke om det er helt forkert men det virkede i hvert fald så håber det går.
