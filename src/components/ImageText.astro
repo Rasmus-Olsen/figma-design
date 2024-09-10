@@ -113,6 +113,20 @@ const { side = 'left', tag, heading, text, listOne, listTwo, imgUrl } = Astro.pr
                     }
                 }
             }
+            @media (width < 600px) {
+                grid-template-columns: 1fr;
+                height: fit-content;
+                gap: 1rem;
+                .img-wrapper {
+                &::after, &::before {
+                display: none;
+                }
+                    img {
+                        height: 100%;
+                        position: static;
+                    }
+                }
+            }
         }
     }
 </style>

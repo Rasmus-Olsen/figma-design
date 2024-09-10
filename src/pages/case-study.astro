@@ -31,10 +31,14 @@ import CaseStudyComponent from "../components/CaseStudyComponent.astro";
 @layer components {
     img {
         padding: 0 40px;
+        @media (width < 600px) {
+            padding: 0;
+        }
     }
     ul {
         gap: 1rem;
         display: grid;
     }
+ 
 }
 </style>

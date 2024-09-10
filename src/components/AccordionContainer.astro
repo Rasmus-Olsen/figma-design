@@ -16,31 +16,32 @@ const { data, exclusive } = Astro.props;
 
 
 <style>
-  
-
-  .accordion-top {
-    text-align: center;
-    .green-tag {
-      display: inline-block;
-      padding: 4px 20px;
-      background: var(--secondary-color);
-      color: var(--white-color);
-      border-radius: 100px;
-    }
-  }
+  @layer components {
   .accordion-container {
     background: #f5f5f5;
     border-radius: 30px;
     padding: 50px;
+
+    @media (width < 600px) {
+      padding: 40px 20px;
+    }
+    .accordion-top {
+      text-align: center;
+      .green-tag {
+        display: inline-block;
+        padding: 4px 20px;
+        background: var(--secondary-color);
+        color: var(--white-color);
+        border-radius: 100px;
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0 1rlh;
+      margin-inline: auto;
+    }
   }
-
-  ul {
-    list-style: none;
-    padding: 0 1rlh;
-    margin-inline: auto;
-  }
-
-
+}
 </style>
 
 <script>

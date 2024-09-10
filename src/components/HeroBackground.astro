@@ -39,6 +39,10 @@ const { surface = 'team', tag, headline } = Astro.props;
                 display: inline-block;
                 padding: 3rem 3.75rem;
                 max-width: 790px;
+
+                @media (width < 600px) {
+                  padding: 2rem;
+                }
                 .tag {
                     padding: 0px 15px;
                     background: var(--primary-color);

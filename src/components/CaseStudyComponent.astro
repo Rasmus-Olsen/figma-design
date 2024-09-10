@@ -2,7 +2,6 @@
 ---
 
 <section class="image-boxs">
-    <div class="img-wrapper"></div>
     <div class="box">
         <div class="box-left">
             <div class="column">
@@ -28,11 +27,10 @@
      .image-boxs {
         position: relative;
         margin-bottom: 40px;
-        .img-wrapper {
-            background-image: url("src/assets/images/casestudy.png");
+        background-image: url("src/assets/images/casestudy.png");
             height: 450px;
             border-radius: 20px;
-        }
+
         .box {
             display: flex;
             justify-content: space-between;
@@ -58,6 +56,24 @@
             }
             .box-right {
 
+            }
+        }
+        @media (width < 600px) {
+            height: 250px;
+            margin-bottom: 375px;
+            .box {
+                width: 100%;
+                flex-direction: column;
+                position: inherit;
+                padding: 20px;
+                text-align: center;
+                top: 260px;
+                .box-left {
+                    grid-template-columns: 1fr;
+                }
+                .box-right {
+                    margin: 20px;
+                }
             }
         }
     } 

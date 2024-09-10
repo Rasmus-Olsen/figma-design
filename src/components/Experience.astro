@@ -103,7 +103,19 @@
                 }
             }   
         }
+        @media (width < 600px) {
+            .content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .circles {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+}
     }
+
 }
 
 </style>
