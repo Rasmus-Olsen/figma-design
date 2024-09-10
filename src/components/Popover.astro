@@ -2,7 +2,9 @@
 
 ---
 
-<button popovertarget="popup" class="loginbtn">Login</button>
+<div class="width-button">
+  <button popovertarget="popup" class="loginbtn">Login</button>
+</div>
 
 <div popover id="popup">
   <h4>Dashboard Login</h4>
@@ -18,19 +20,24 @@
 
 <style>
   @layer components {
+    
   [popover]::backdrop {
     background: rgba(0, 0, 0, 0.50);
     backdrop-filter: blur(16px);
   }
 
+  .width-button {
+    width: 125px;
    .loginbtn {
-    background-color: var(--primary-color);
-    font-size: 1rem;
-    padding: 4px 16px;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    cursor: pointer;
-  }
+      background-color: var(--primary-color);
+      font-size: 1rem;
+      padding: 4px 16px;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      margin-left: auto;
+    }
+}
 
   form {
     display: flex;
