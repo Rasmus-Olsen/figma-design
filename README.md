@@ -17,6 +17,6 @@ nemmere måde hvis jeg lige havde tænkt lidt mere over opbygning i starten.
 Den er hellere ikke helt dynamisk som jeg ville havde ønsket hvis jeg nu havde
 haft en 2-3 dage mere, men den er lidt bare lavet som desktop og mobilversion..
 
-# Nogen af de ting jeg gerne ville have fikset som er hurtig at gøre men jeg fik det aldrig gjort:
+# Nogen af de ting jeg gerne ville have fikset som er hurtig at gøre men jeg fik det aldrig gjort
 
 Ville gerne have lavet en burgermenu (eller bare en bedre mobil navigation).
