@@ -3,7 +3,7 @@ const { side = 'left', tag, heading, text, listOne, listTwo, imgUrl } = Astro.pr
 
 ---
 
-<div data-side={side} class="image-text">
+<section data-side={side} class="image-text">
     <div class="img-wrapper">
         <img src={imgUrl}>
         
@@ -21,7 +21,7 @@ const { side = 'left', tag, heading, text, listOne, listTwo, imgUrl } = Astro.pr
               )}
         </ul>
     </div>
-</div>
+</section>
 
 <style>
     @layer components {

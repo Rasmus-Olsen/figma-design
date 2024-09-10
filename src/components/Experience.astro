@@ -1,0 +1,170 @@
+---
+---
+
+<section class="experience full flow-space">
+    <div class="content">
+        <div class="left">
+            <p class="tag">Experience</p>
+            <h1>More than 25 years of experience</h1>
+            <p>3000+ our clients are insured around the World</p>
+        </div>
+        <div class="circles">
+            <div class="circle">
+                <div class="parent" style="--percent: 85%">
+                    <div class="child"></div>
+                    <!-- <p class="h1">85%<p/> -->
+                    <p class="percent " data-value="85">0%</p>
+                </div>
+                <h6 class="title">Consistency</h6>
+            </div>
+            <div class="circle">
+                <div class="parent" style="--percent: 95%">
+                    <div class="child"></div>
+                    <!-- <p class="h1">95%<p/> -->
+                    <p class="percent " data-value="95">0%</p>
+                </div>
+                <h6 class="title">Improvement</h6>
+            </div>
+            <div class="circle">
+                <div class="parent" style="--percent: 90%">
+                    <div class="child"></div>
+                    <!-- <p class="h1">90%<p/> -->
+                    <p class="percent" data-value="90">0%</p>
+                </div>
+                <h6 class="title">Branching</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+@layer components {
+    .experience {
+        background: var(--primary-color);
+        padding: 8rem 0;
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .left {
+                .tag {
+                    padding: 0px 15px;
+                    background: var(--white-color);
+                    display: inline-block;
+                    border-radius: 20px;
+                    margin-bottom: 16px;
+                }
+            }
+
+            .circles {
+                display: flex;
+                justify-content: space-between;
+                .circle {
+                    .title {
+                        text-align: center;
+                        margin-top: 1rem;
+                    }
+                    .parent {
+                            --offset-pos: 5px;
+                            --fill-percent: 0; /* Start from 0 */
+                            border: var(--offset-pos) solid transparent;
+                            background:
+                                radial-gradient(circle at 50% calc(var(--offset-pos)/2), white calc(var(--offset-pos)/2), transparent 0) border-box,
+                                linear-gradient(#fbc335, #fbc335) padding-box,
+                                conic-gradient(white var(--fill-percent), #daae3c 0) border-box;
+                            position: relative; 
+                            aspect-ratio: 1;
+                        .child {
+                            aspect-ratio: 1;
+                            border-radius: 99px;
+                            width: 15px;
+                            border: 3px solid white;
+                            background: black;
+                            position: absolute;
+                            offset-path: border-box;
+                            offset-distance: var(--fill-percent);
+                            offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
+                        }
+                    }
+                    .parent {
+                        aspect-ratio: 1;
+                        width: 150px;
+                        border-radius: 100%;
+                        .percent {
+                            position: absolute;
+                            bottom: 42%;
+                            justify-content: center;
+                            color: var(--heading-color);
+                            width: 100%;
+                            display: flex;
+                            font-size: clamp(2rem, 1.6087rem + 1.9565vw, 3.125rem);
+                        
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}
+
+</style>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const percentElements = document.querySelectorAll(".percent");
+    const section = document.querySelector(".experience");
+
+    function startAnimation() {
+        percentElements.forEach(elem => {
+            const targetValue = parseInt(elem.getAttribute("data-value"), 10);
+            const duration = 2000;
+            const incrementTime = 10;
+            const steps = duration / incrementTime;
+            const incrementValue = targetValue / steps;
+
+            let currentValue = 0;
+            elem.textContent = `${currentValue}%`;
+
+            const parent = elem.closest('.parent') as HTMLElement;
+            if (parent) {
+                parent.style.setProperty('--fill-percent', '0%');
+
+                const interval = setInterval(() => {
+                    currentValue += incrementValue;
+                    if (currentValue >= targetValue) {
+                        currentValue = targetValue;
+                        clearInterval(interval);
+                    }
+                    elem.textContent = `${Math.floor(currentValue)}%`;
+                    parent.style.setProperty('--fill-percent', `${Math.floor(currentValue)}%`);
+                }, incrementTime);
+            }
+        });
+    }
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7 // Start when 70% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startAnimation();
+                observer.unobserve(entry.target); // Stop observing after animation starts
+            }
+        });
+    }, observerOptions);
+
+    if (section) {
+        observer.observe(section);
+    }
+});
+
+</script>
+
+
+
+   
+    

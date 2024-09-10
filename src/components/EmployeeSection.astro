@@ -26,12 +26,11 @@ const { data, tag, heading, button, description } = Astro.props
         )}
         
     </div>
-    <section class="employees">
+    <div class="employees">
         {
             data.map(employee => <EmployeeCard employee={employee}/>)
         }
-      
-    </section>
+    </div>
 </section>
 
 <style>

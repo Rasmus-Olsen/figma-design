@@ -9,7 +9,7 @@ const { surface = 'primary', tag, heading, button, description } = Astro.props
 ---
 
 
-<div data-surface={surface} class="core-values full">
+<section data-surface={surface} class="core-values full">
     <div class="core-values-top">
         <div class="text"> 
             {tag && (
@@ -44,7 +44,7 @@ const { surface = 'primary', tag, heading, button, description } = Astro.props
       </li>
     ))}
   </ul>
-</div>
+</section>
 
 <style>
     @layer components {
@@ -67,12 +67,14 @@ const { surface = 'primary', tag, heading, button, description } = Astro.props
         --background-color: #F5F5F5;
         --values-heading-color: var(--heading-color);
         --tag-color: var(--heading-color);
+        --flow-space-top: var(--section-gap, 100px);
         li {
             --card-color: var(--white-color);
         }
     }
 
     .core-values {
+        margin-top: var(--flow-space-top)!important;
         gap: 34px;
         display: grid;
         background: var(--background-color);

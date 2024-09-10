@@ -25,6 +25,17 @@
     line-height: 1.475rem;
   }
 
+  article.small-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: var(--flow-space);
+    }
+  }
+
   h1,
   h2,
   h3,
@@ -35,6 +46,7 @@
     font-family: Cabin;
     line-height: var(--heading-line-height);
     font-weight: 600;
+    margin: 0;
   }
 
   h1,
@@ -61,6 +73,65 @@
   .h6 {
     font-size: clamp(1.125rem, 0.9728rem + 0.7609vw, 1.5625rem);
   }
+
+  /*
+  * Flow spacing
+  */
+
+  /* Sætter variablen */
+  section,
+  footer {
+    margin-top: var(--flow-space, 0.5rlh);
+  }
+
+  /* definere flow-space for section, footer og dem med classes flow-soace */
+  section,
+  footer,
+  .flow-space {
+    --flow-space: 100px;
+  }
+
+  /* Fjerner flow-space for dem der er full width med baggrundsfarve (hero osv) da de ikke skal have */
+  section.full {
+    --flow-space: 0px;
+    &.flow-space {
+      --flow-space: 100px;
+    }
+  }
+
+  article.small-content {
+    > * + * {
+      /* margin-block-start */
+      margin-top: var(--flow-space, 0.5rlh);
+    }
+
+    h2 {
+      --flow-space: 2rlh;
+    }
+
+    h3 {
+      --flow-space: 5rem;
+    }
+
+    h3 + * {
+      --flow-space: 1rem;
+    }
+
+    h4 {
+      --flow-space: 4rem;
+    }
+
+    h4 + * {
+      --flow-space: 2rem;
+    }
+    ul {
+      --flow-space: 2.5rem;
+    }
+    img {
+      --flow-space: 2rem;
+    }
+  }
+
   /*
 * Button styling
 */

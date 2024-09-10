@@ -2,7 +2,7 @@
 const { surface = 'team', tag, headline } = Astro.props;
 ---
 
-<div data-surface={surface} class="hero full">
+<section data-surface={surface} class="hero full">
   <div class="content">
     <div class="content-background">
         <div class="tag">
@@ -11,7 +11,7 @@ const { surface = 'team', tag, headline } = Astro.props;
         <h1>{headline}</h1>
     </div>
   </div>
-</div>
+</section>
 
 
 <style>

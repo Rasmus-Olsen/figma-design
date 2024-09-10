@@ -1,0 +1,65 @@
+---
+---
+
+<section class="image-boxs">
+    <div class="img-wrapper"></div>
+    <div class="box">
+        <div class="box-left">
+            <div class="column">
+                <p class="font-large">Case Name</p>
+                <p>Taxes & Efficiency</p>
+            </div>
+            <div class="column">
+                <p class="font-large">Category</p>
+                <p>Business</p>
+            </div>
+            <div class="column">
+                <p class="font-large">Date</p>
+                <p>27th September 2022</p>
+            </div>
+        </div>
+        <div class="box-right">
+            <a href="#" class="btn-secondary">Live Preview</a>
+        </div>
+    </div>
+</section>
+
+<style>
+     .image-boxs {
+        position: relative;
+        margin-bottom: 40px;
+        .img-wrapper {
+            background-image: url("src/assets/images/casestudy.png");
+            height: 450px;
+            border-radius: 20px;
+        }
+        .box {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 60px;
+            background: var(--heading-color);
+            color: var(--white-color);
+            border-radius: 20px;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%); 
+            width: 900px; 
+            .box-left {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+                .column {
+                    .font-large {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                    }   
+                }
+            }
+            .box-right {
+
+            }
+        }
+    } 
+
+</style>
