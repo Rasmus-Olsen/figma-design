@@ -20,3 +20,10 @@ haft en 2-3 dage mere, men den er lidt bare lavet som desktop og mobilversion..
 # Nogen af de ting jeg gerne ville have fikset som er hurtig at gøre men jeg fik det aldrig gjort
 
 Ville gerne have lavet en burgermenu (eller bare en bedre mobil navigation).
+
+# Store problemer
+
+Havde store problemer med at få HeroPrimary til at fungere som jeg gerne ville, jeg sad og lavede den på min computer
+på skolen og var rimelig tilfreds, så kom jeg hjem og satte mig ved mit arbejds setup hvor jeg har 3 skærme
+og de er en del større, der fandt jeg så ud af det ikke virkede som det skulle når man scalere tingene.
+Håber det gpr..
