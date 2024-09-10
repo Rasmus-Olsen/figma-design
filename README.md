@@ -9,7 +9,7 @@ Efterfulgt vil jeg lige sige jeg har ikke gjort alting optimalt, jeg har feks.
 lavet nogen bokse position: relative osv. som jeg nok kunne ahve gjort bedre,
 men tiden løb lidt fra mig
 
-# Mobilversionen:
+# Mobilversionen
 
 Jeg har lidt lavet en mobilversion men meget hurtigt, er sikker på der kunne være en
 nemmere måde hvis jeg lige havde tænkt lidt mere over opbygning i starten.
