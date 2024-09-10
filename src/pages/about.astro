@@ -4,6 +4,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import HeroBackground from "../components/HeroBackground.astro";
 
+import ImageText from "../components/ImageText.astro";
+
 import faqData from "../data/faq.json";
 import AccordionContainer from "../components/AccordionContainer.astro";
 
@@ -18,6 +20,7 @@ const coreValues = await fetch("https://raw.githubusercontent.com/Rasmus-Olsen/f
 
 <BaseLayout title="About">
     <HeroBackground surface="about" tag="SERVICE" headline="Creative Services For Boost Your Business Growth"/>
+    <ImageText side="right" tag="OUR VISION" heading="Turn your ideas into reality." text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." listOne="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day." listTwo="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital." imgUrl="../src/assets/images/image-text2.jpg"/>
     <CoreValues coreValues={coreValues} surface="secondary" tag="Growing with our Client" heading="Our core values & principles" button="Get in touch" description="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps."/>
     <EmployeeSection data={FirstThreeEmployess} tag="Our team" heading="We champion the bold to achieve the extraordinary" description="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team"./>
     <AccordionContainer data={faqData} exclusive="true" />
