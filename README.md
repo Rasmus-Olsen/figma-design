@@ -21,6 +21,9 @@ haft en 2-3 dage mere, men den er lidt bare lavet som desktop og mobilversion..
 
 Ville gerne have lavet en burgermenu (eller bare en bedre mobil navigation).
 
+Ville gerne have set på mine billeder i employee sectionerne, mine billeder er super dårlige og ved ikke helt hvorfor.
+Jeg prøvede at hente dem på forskellige måder osv. men billederne bliver bare ved med at være dårlige..
+
 # Store problemer
 
 Havde store problemer med at få HeroPrimary til at fungere som jeg gerne ville, jeg sad og lavede den på min computer
