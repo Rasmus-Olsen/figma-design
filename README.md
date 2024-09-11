@@ -9,6 +9,12 @@ Efterfulgt vil jeg lige sige jeg har ikke gjort alting optimalt, jeg har feks.
 lavet nogen bokse position: relative osv. som jeg nok kunne ahve gjort bedre,
 men tiden løb lidt fra mig
 
+Fik også hjælp af chatGPT til at opsætte min slug.astro
+Var tæt på at have den fikset selv men desværre ikke, har lagt kommentare op over for at huske
+mig selv på hvad de forskellige ting det bliver gjort ved hjælp af det chatGPT sendte mig.
+Fordi bruger: const teamMembers = await fetch(); to gange og hvis du spørg mig må der være en bedre måde at gøre det på
+bare ikke en jeg kunne løse..
+
 # Mobilversionen
 
 Jeg har lidt lavet en mobilversion men meget hurtigt, er sikker på der kunne være en
@@ -28,8 +34,8 @@ Jeg prøvede at hente dem på forskellige måder osv. men billederne bliver bare
 
 Havde store problemer med at få HeroPrimary til at fungere som jeg gerne ville, jeg sad og lavede den på min computer
 på skolen og var rimelig tilfreds, så kom jeg hjem og satte mig ved mit arbejds setup hvor jeg har 3 skærme
-og de er en del større, der fandt jeg så ud af det ikke virkede som det skulle når man scalere tingene.
-Håber det gr..
+og de er en del større, der fandt jeg så ud af det ikke virkede som det skulle når men man scalere tingene.
+Så jeg er meget nysgerrig på hvordan du ville løse den, har prøvet 2-3 ting uden held.
 
 Havde problemer med at når jeg lagde mine ting på netlify ville billederne ikke komme frem,
 fandt så frem til at hvis jeg lagde mine mapper og billeder billederne ind i public mappen kunne jeg
