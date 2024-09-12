@@ -1,6 +1,7 @@
 ---
 const { ...props } = Astro.props;
 const { id, question, answer, linkBlock } = props;
+import Button from "../components/Button.astro";
 ---
 
 <li>
@@ -24,9 +25,7 @@ const { id, question, answer, linkBlock } = props;
       {answer.map((a) => <p set:html={a} />)}
       {
         linkBlock && (
-          <a class="btn-primary" href={linkBlock.url} target="_blank">
-            {linkBlock.label}
-          </a>
+            <Button btnStyle="primary" text={linkBlock.label}/>
         )
       }
     </div>
@@ -36,7 +35,7 @@ const { id, question, answer, linkBlock } = props;
 
 
 <style>
-  
+  @layer components {
   article {
     color: hsl(190 30% 12%);
     border-bottom: 1px solid #dadada;
@@ -114,7 +113,7 @@ button[aria-expanded="true"] svg {
         color: var(--body-text);
         font-weight: normal;
        }
-       .btn-primary {
+       .btn {
         margin-top: 1rem;
        }
       }
@@ -131,5 +130,7 @@ button[aria-expanded="true"] svg {
       }
     }
   }
+
+}
 
 </style> 

@@ -131,39 +131,4 @@
       --flow-space: 2rem;
     }
   }
-
-  /*
-* Button styling
-*/
-  .btn-primary {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 100px;
-    border: 2px solid var(--tertiary-color);
-    background: var(--tertiary-color);
-    color: var(--white-color);
-    font-size: 18px;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-      background: var(--white-color);
-      border-color: #000;
-      color: var(--tertiary-color);
-    }
-  }
-
-  .btn-secondary {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 100px;
-    border: 2px solid var(--primary-color);
-    background: var(--primary-color);
-    color: var(--tertiary-color);
-    font-size: 18px;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-      background: var(--tertiary-color);
-      border-color: var(--tertiary-color);
-      color: var(--white-color);
-    }
-  }
 }

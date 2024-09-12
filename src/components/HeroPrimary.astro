@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 ---
 
 <section class="full hero">
@@ -6,7 +7,7 @@
         <div class="left">
             <h1>Adam Buschemia Business Consultant</h1>
             <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
-            <div class="btn-secondary">Book a Meeting</div>
+            <Button btnStyle="secondary" text="Book a Meeting"/>
         </div>
         <div class="right">
             <img src="/assets/images/sarah.jpg" alt="">
@@ -16,17 +17,18 @@
         <div class="box box-1">
             <h6>Finance & Restructuring</h6>
             <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
-            <a class="btn-primary">Our Services</a>
+            <Button btnStyle="primary" text="Our Services"/>
         </div>
         <div class="box box-2">
             <h6>Our Approach</h6>
             <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
-            <a class="btn-primary">More About </a>
+            <Button btnStyle="primary" text="More About"/>
+            
         </div>
         <div class="box box-3">
             <h6>Consultalk Result</h6>
             <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
-            <a class="btn-primary">Explore Our Solution</a>
+            <Button btnStyle="primary" text="Explore Our Solution"/>
         </div>
     </div>
 </section>
@@ -90,9 +92,8 @@
                 p {
                     color: var(--white-color);
                 }
-                .btn-primary {
+                .btn {
                     margin-top: 36px;
-                    cursor: pointer;
                 }
             }
         }

@@ -5,6 +5,7 @@ const {values } = coreValues;
 
 const { surface = 'primary', tag, heading, button, description } = Astro.props
 
+import Button from "../components/Button.astro";
 
 ---
 
@@ -15,15 +16,15 @@ const { surface = 'primary', tag, heading, button, description } = Astro.props
             {tag && (
                 <p class="tag">{tag}</p>
             )}
-              {heading && (
+            {heading && (
                 <h1>{heading}</h1>
             )}
-                  {description && (
-                    <p>{description}</p>
-                )}
+            {description && (
+                <p>{description}</p>
+            )}
         </div>
         {button && (
-            <a class="btn-secondary" href="#">{button}</a>
+            <Button btnStyle="secondary" text={button}/>
         )}
         
     </div>

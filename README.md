@@ -30,11 +30,6 @@ Ville gerne have lavet en burgermenu (eller bare en bedre mobil navigation).
 Ville gerne have set på mine billeder i employee sectionerne, mine billeder er super dårlige og ved ikke helt hvorfor.
 Jeg prøvede at hente dem på forskellige måder osv. men billederne bliver bare ved med at være dårlige..
 
-Burde nok også at have lavet min knap som en component og bruge data til at lave om det var primary eller
-secondary, lige pt har jeg bare a tags med class af det ene eller det andet. Ved vi har lært at bruge data
-så derfor ville det give mening at jeg brugte det, men lavede knapperne som det første og fik det aldrig ændret,
-og tænker jeg bruger data så mange andre steder og viser jeg kan finde ud af det, så håber det er okay for denne lille ting.
-
 # Store problemer
 
 Havde store problemer med at få HeroPrimary til at fungere som jeg gerne ville, jeg sad og lavede den på min computer
